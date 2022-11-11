@@ -235,22 +235,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   border-bottom: 3px solid #663399;
 }
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
-  }
-}
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -396,6 +381,14 @@ section {
   transition: 0.9s;
   background-color: #663399;
 }
+.skills-content img{
+  padding: 3px;
+}
+.certs .google img,
+.certs .grasshopper img,
+.certs .typing img{
+  width: 30%;
+}
 
 /*--------------------------------------------------------------
 # Resume
@@ -510,6 +503,9 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-links {
   opacity: 1;
   bottom: 0;
+}
+.portfolio .portfolio-container img{
+  border-radius: 1%;
 }
 
 /*--------------------------------------------------------------
@@ -802,17 +798,6 @@ section {
   color: #0e2442;
   content: "/";
 }
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-  .breadcrumbs ol {
-    display: block;
-  }
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
@@ -836,11 +821,4 @@ section {
   text-align: center;
   font-size: 13px;
   color: #eaebf0;
-}
-@media (max-width: 1199px) {
-  #footer {
-    position: static;
-    width: auto;
-    padding-right: 20px 15px;
-  }
 }

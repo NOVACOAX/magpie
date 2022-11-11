@@ -1,6 +1,5 @@
 
-(function() {
-  "use strict";
+$(document).ready(function () {
   
   /**
    * Easy selector helper function
@@ -247,5 +246,8 @@
       mirror: false
     })
   });
-  
-})()
+
+
+
+})
+
