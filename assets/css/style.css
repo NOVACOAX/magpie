@@ -384,6 +384,9 @@ section {
 .skills-content img{
   padding: 3px;
 }
+.certs .edx img{
+  width: 49%;
+}
 .certs .google img,
 .certs .grasshopper img,
 .certs .typing img{
