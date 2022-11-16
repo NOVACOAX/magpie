@@ -514,7 +514,7 @@ section {
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
-/* .portfolio-details {
+.portfolio-details {
   padding-top: 40px;
 }
 .portfolio-details .portfolio-details-slider img {
@@ -563,7 +563,18 @@ section {
 }
 .portfolio-details .portfolio-description p {
   padding: 0;
-} */
+}
+.portfolio-details #nav-tabContent .hidden{
+  height: 0;
+  opacity: 0;
+}
+.portfolio-details #nav-tabContent .swiper-slide{
+  text-align: center;
+}
+.portfolio-details #nav-tabContent img{
+  max-height: 40vh;
+  width: auto;
+}
 
 /*--------------------------------------------------------------
 # Services
@@ -778,7 +789,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 20px 0;
-  background: #f9f9f9;
+  background: #cbc4dc;
 }
 .breadcrumbs h2 {
   font-size: 26px;

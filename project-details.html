@@ -19,22 +19,17 @@
     rel="stylesheet" />
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/lightbox.min.css" rel="stylesheet" />
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/responsive.css" rel="stylesheet" />
 
-  <!-- =======================================================
-  * Template Name: iPortfolio - v3.7.0
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -70,14 +65,13 @@
             <a href="#brands" class="nav-link scrollto"><i class="bx bx-stats"></i> <span>Brands</span></a>
           </li>
           <li class="border-bottom my-lg-4 my-md-3 my-1 my-sm-2">
-            <h6 style="color: rgb(216, 214, 214)"><span>Services</span></h6>
+            <h6 style="color: rgb(216, 214, 214)"><span>Projects</span></h6>
           </li>
           <li class="ms-3">
-            <a href="#web_development" class="nav-link scrollto"><i class="bx bx-terminal"></i> <span>Web
-                development</span></a>
+            <a href="#nav-tabContent" class="nav-link scrollto" id="development-btn"><i class="bx bx-terminal"></i> <span>Web development</span></a>
           </li>
           <li class="ms-3">
-            <a href="#photography" class="nav-link scrollto"><i class="bx bx-aperture"></i> <span>Photography</span></a>
+            <a href="#nav-tabContent" class="nav-link scrollto" id="photography-btn"><i class="bx bx-aperture"></i> <span>Photography</span></a>
           </li>
           <li class="border-bottom my-2"><br /></li>
           <li>
@@ -110,15 +104,10 @@
       <div class="container">
         <div class="section-title">
           <h2>Testimonials</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur
-            ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam
-            quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
-            Quia fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
+          <p>What do people say about my services?</p>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+        <!-- <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up">
@@ -134,60 +123,10 @@
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
-            </div>
+            </div> -->
             <!-- End testimonial item -->
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse
-                  labore quem cillum quid cillum eram malis quorum velit fore
-                  eram velit sunt aliqua noster fugiat irure amet legam anim
-                  culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim
-                  sint quorum nulla quem veniam duis minim tempor labore quem
-                  eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="" />
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa
-                  multos export minim fugiat minim velit minim dolor enim duis
-                  veniam ipsum anim magna sunt elit fore quem dolore labore
-                  illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="" />
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <div class="testimonial-item" data-aos="fade-up" data-aos-delay="400">
                 <p>
                   <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -197,11 +136,11 @@
                   fore nisi cillum quid.
                   <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                 </p>
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="" />
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
                 <h3>John Larson</h3>
                 <h4>Entrepreneur</h4>
               </div>
-            </div>
+            </div> -->
             <!-- End testimonial item -->
           </div>
           <div class="swiper-pagination"></div>
@@ -218,94 +157,239 @@
           </p>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec
-                  porttitora entum suscipit rhoncus. Accusantium quam,
-                  ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                  risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="" />
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
+        <div class=" swiper" data-aos="fade-left" data-aos-delay="50">
+          <div class="row skills-content justify-content-center">
+            <div class="col-12 col-md-11 text-center" data-aos="fade-left">
+              <div id="brands-logos" class="mt-4">
+
+                <a href="https://linktr.ee/thisismeorganization?fbclid=PAAabyOHQK7958GkGv-UOyeBCd8GqhXirK5kdMdeFS9GOkaABxsk1q7qGhZPA" target="_blank" rel="noreferrer"> 
+                  <img src="assets/img/brands/me.jpg" class="rounded rounded-circle" alt="This is me community" width="100" height="100"/> 
+                </a> 
+
               </div>
             </div>
-            <!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse
-                  labore quem cillum quid cillum eram malis quorum velit fore
-                  eram velit sunt aliqua noster fugiat irure amet legam anim
-                  culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="" />
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-              </div>
-            </div>
-            <!-- End testimonial item -->
-
           </div>
-          <div class="swiper-pagination"></div>
         </div>
       </div>
     </section>
     <!-- ======= Portfolio Details Section ======= -->
     <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="" />
-                </div>
+      <div id="nav-tabContent">
+        <div class="hidden" id="nav-development">
+          <div class="container pt-3 pt-md-5">
+            <div class="section-title">
+              <h2>Web development projects</h2>
+            </div>
+            <div class="row px-2">
 
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="" />
+              <!-- * Single project -->
+              <div class="col-lg-4 gy-4 my-4 mx-sm-2 border shadow rounded py-3">
+                <div class="portfolio-info rounded">
+                  <h3>Project information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: portfolio website</li>
+                    <li><strong>Client</strong>: MAgPIE</li>
+                    <li><strong>Project URL</strong>:
+                      <a href="https://novacoax.github.io/magpie/">novacoax.github.io/magpie</a>
+                    </li>
+                  </ul>
                 </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="" />
+                <div class="portfolio-description">
+                  <div class="section-title">
+                    <h2>Tools and Languages</h2>
+                  </div>
+                  <div class="p-2">
+                    <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer"> 
+                      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png" alt="Visual Studio Code" width="40" height="40"/> 
+                    </a>
+                    <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> 
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> 
+                    </a> 
+                    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
+                      <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> 
+                    </a> 
+                    <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> 
+                    </a> 
+                    <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> 
+                    </a> 
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
+                    </a> 
+                    <a href="https://jquery.com/" target="_blank" rel="noreferrer"> 
+                      <img src="https://findicons.com/files/icons/2779/simple_icons/128/jquery_128_black.png" alt="jquery" width="43" height="43"/> 
+                    </a> 
+                  </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
+              <!-- * End single project -->
+
             </div>
           </div>
+        </div>
+        <div id="nav-photography">
+          <div class="container pt-3 pt-md-5">
+            <div class="section-title">
+              <h2>Photography projects</h2>
+            </div>
+            
+            <!-- * Single project -->
+            <div class="row gy-4 my-4 mx-1 mx-sm-2 border shadow rounded pb-3">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/ga1.jpg" data-lightbox="ga" data-title="PCEA GAITUMBI YOUTH RETREAT">
+                        <img src="assets/img/projects/ga1.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/ga2.jpg" data-lightbox="ga" data-title="PCEA GAITUMBI YOUTH RETREAT">
+                        <img src="assets/img/projects/ga2.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/ga3.jpg" data-lightbox="ga" data-title="PCEA GAITUMBI YOUTH RETREAT">
+                        <img src="assets/img/projects/ga3.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/ga4.jpg" data-lightbox="ga" data-title="PCEA GAITUMBI YOUTH RETREAT">
+                        <img src="assets/img/projects/ga4.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4">
+                <div class="portfolio-info rounded">
+                  <h3>Project information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: Event photography</li>
+                    <li><strong>Client</strong>: PCEA Gaitumbi Church</li>
+                    <li><strong>Project date</strong>: 24 September, 2022</li>
+                  </ul>
+                </div>
+                <div class="portfolio-description">
+                  <h2>PCEA GAITUMBI YOUTH RETREAT</h2>
+                  <p>This was a fun and amazing day at work. We visited Lord Egerton Castle and got to capture all the wonderful moments from the happy faces.</p>
+                </div>
+              </div>
+            </div>
+            <!-- * End single project -->
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li>
-                  <strong>Project URL</strong>:
-                  <a href="#">www.example.com</a>
-                </li>
-              </ul>
+            <!-- * Single project -->
+            <div class="row gy-4 my-4 mx-1 mx-sm-2 border shadow rounded pb-3">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me1.jpg" data-lightbox="me1" data-title="THIS IS ME HANG OUT">
+                        <img src="assets/img/projects/me1.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me2.jpg" data-lightbox="me1" data-title="THIS IS ME HANG OUT">
+                        <img src="assets/img/projects/me2.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me3.jpg" data-lightbox="me1" data-title="THIS IS ME HANG OUT">
+                        <img src="assets/img/projects/me3.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me4.jpg" data-lightbox="me1" data-title="THIS IS ME HANG OUT">
+                        <img src="assets/img/projects/me4.jpg" alt="" >
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4">
+                <div class="portfolio-info rounded">
+                  <h3>Project information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: Event photography</li>
+                    <li><strong>Client</strong>: This Is Me</li>
+                    <li><strong>Project date</strong>: 01 October, 2022</li>
+                  </ul>
+                </div>
+                <div class="portfolio-description">
+                  <h2>THIS IS ME HANG OUT</h2>
+                  <p>My first partnership with the 'THIS IS ME' community. A very amazing experience for me and eye-opening. The people were lively and a lot of happy momments happening consecutively.</p>
+                </div>
+              </div>
             </div>
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos
-                itaque inventore commodi labore quia quia. Exercitationem
-                repudiandae officiis neque suscipit non officia eaque itaque
-                enim. Voluptatem officia accusantium nesciunt est omnis
-                tempora consectetur dignissimos. Sequi nulla at esse enim cum
-                deserunt eius.
-              </p>
+            <!-- * End single project -->
+
+            <!-- * Single project -->
+            <div class="row gy-4 my-4 mx-1 mx-sm-2 border shadow rounded pb-3">
+              <div class="col-lg-8">
+                <div class="portfolio-details-slider swiper">
+                  <div class="swiper-wrapper align-items-center">
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me5.jpg" data-lightbox="me2" data-title="PINKISH OPEN MIC">
+                        <img src="assets/img/projects/me5.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me6.jpg" data-lightbox="me2" data-title="PINKISH OPEN MIC">
+                        <img src="assets/img/projects/me6.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me7.jpg" data-lightbox="me2" data-title="PINKISH OPEN MIC">
+                        <img src="assets/img/projects/me7.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me8.jpg" data-lightbox="me2" data-title="PINKISH OPEN MIC">
+                        <img src="assets/img/projects/me8.jpg" alt="" >
+                      </a>
+                    </div>
+    
+                    <div class="swiper-slide">
+                      <a href="assets/img/projects/me9.jpg" data-lightbox="me2" data-title="PINKISH OPEN MIC">
+                        <img src="assets/img/projects/me9.jpg" alt="" >
+                      </a>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+    
+              <div class="col-lg-4">
+                <div class="portfolio-info rounded">
+                  <h3>Project information</h3>
+                  <ul>
+                    <li><strong>Category</strong>: Event photography</li>
+                    <li><strong>Client</strong>: This Is Me</li>
+                    <li><strong>Project date</strong>: 05 November, 2022</li>
+                  </ul>
+                </div>
+                <div class="portfolio-description">
+                  <h2>PINKISH OPEN MIC</h2>
+                  <p>Yet another partnership with the 'THIS IS ME' community. This time the theme was pink and was lovely. I decided to continue with the theme even in the Photos. </p>
+                </div>
+              </div>
             </div>
+            <!-- * End single project -->
           </div>
         </div>
       </div>
@@ -313,13 +397,12 @@
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
-
         <div class="section-title">
           <h2>Connect with me</h2>
           <p>Please reach me through any of the contact info bellow.</p>
         </div>
 
-        <div class="row" data-aos="fade-in">
+        <div class="row">
 
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info rounded">
@@ -340,17 +423,33 @@
                 <h4>Call:</h4>
                 <p>+254 719 769035/ +254 780 284952</p>
               </div>
-            </div>
 
-          </div>
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info rounded">
-                <a href="https://twitter.com/nova_coax" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="nova_coax" height="30" width="40" /></a>
-                <a href="https://linkedin.com/in/https://www.linkedin.com/in/hugh-herschell-45ba33230/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/hugh-herschell-45ba33230/" height="30" width="40" /></a>
-                <a href="https://stackoverflow.com/users/https://stackoverflow.com/users/19451979/hugh-herschell" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="https://stackoverflow.com/users/19451979/hugh-herschell" height="30" width="40" /></a>
-                <a href="http://www.facebook.com/profile.php?id=100087425856037" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/profile.php?id=100087425856037" height="30" width="40" /></a>
-                <a href="https://instagram.com/https://instagram.com/ma_g_pie" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://instagram.com/ma_g_pie" height="30" width="40" /></a>
-                <a href="https://www.youtube.com/c/https://www.youtube.com/channel/uceghwxy1c7iixwawinomopa" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://www.youtube.com/channel/uceghwxy1c7iixwawinomopa" height="30" width="40" /></a>
+              <div class="socials text-center">
+                <a href="http://www.facebook.com/profile.php?id=100087425856037" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="https://www.facebook.com/profile.php?id=100087425856037" height="30" width="40" />
+                </a>
+                <a href="https://linkedin.com/in/https://www.linkedin.com/in/hugh-herschell-45ba33230/" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="https://www.linkedin.com/in/hugh-herschell-45ba33230/" height="30" width="40" />
+                </a>
+                <a href="https://twitter.com/nova_coax" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="nova_coax" height="30" width="40" />
+                </a>
+                <a href="https://wa.me/+254719769035" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" alt="https://wa.me/+254719769035" height="40" width="40" />
+                </a>
+                <a href="https://stackoverflow.com/users/https://stackoverflow.com/users/19451979/hugh-herschell" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/stack-overflow.svg" alt="https://stackoverflow.com/users/19451979/hugh-herschell" height="30" width="40" />
+                </a>
+                <a href="https://instagram.com/https://instagram.com/ma_g_pie" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="https://instagram.com/ma_g_pie" height="30" width="40" />
+                </a>
+                <a href="https://www.youtube.com/c/https://www.youtube.com/channel/uceghwxy1c7iixwawinomopa" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/youtube.svg" alt="https://www.youtube.com/channel/uceghwxy1c7iixwawinomopa" height="30" width="40" />
+                </a>
+                <a href="https://www.tiktok.com/@novacoax/" target="blank">
+                  <img class="mt-3 mx-2 " align="center" loading="lazy" src="https://www.edigitalagency.com.au/wp-content/uploads/TikTok-icon-glyph.png" alt="https://www.tiktok.com/@novacoax/" height="30" width="28" />
+                </a>
+              </div>
             </div>
 
           </div>
@@ -378,6 +477,8 @@
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
@@ -385,6 +486,8 @@
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/lightbox.min.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

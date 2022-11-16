@@ -37,6 +37,32 @@ $(document).ready(function () {
   /**
    * Navbar links active state on scroll
    */
+  const dev_btn = $('#development-btn');
+  const pic_btn = $('#photography-btn');
+  const dev_tab = $('#nav-development');
+  const pic_tab = $('#nav-photography');
+
+  $(dev_btn).on('click',()=>{
+    $(dev_btn).addClass('active');
+    $(pic_tab).animate({
+      height:'0px',
+      opacity: '0'
+    }, "slow");
+    $(pic_tab).addClass('hidden');
+    autoHeightAnimate(dev_tab, 300);
+    $(dev_tab).removeClass('hidden');
+  });
+  $(pic_btn).on('click',()=>{
+    $(pic_btn).addClass('active');
+    $(dev_tab).animate({
+      height:'0px',
+      opacity: '0'
+    }, "slow");
+    $(dev_tab).addClass('hidden');
+    autoHeightAnimate(pic_tab, 300);
+    $(pic_tab).removeClass('hidden');
+  });
+
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
@@ -46,6 +72,11 @@ $(document).ready(function () {
       if (!section) return
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
+        if($(dev_tab).hasClass('hidden')){
+          $(dev_btn).removeClass('active');
+        }else{
+          $(pic_btn).removeClass('active');
+        }
       } else {
         navbarlink.classList.remove('active')
       }
@@ -104,7 +135,12 @@ $(document).ready(function () {
         navbarToggle.classList.toggle('bx-menu')
         navbarToggle.classList.toggle('bx-x')
       }
-      scrollto(this.hash)
+      scrollto(this.hash);
+      if($(dev_tab).hasClass('hidden')){
+        $(dev_btn).removeClass('active');
+      }else{
+        $(pic_btn).removeClass('active');
+      }
     }
   }, true)
   
@@ -115,6 +151,11 @@ $(document).ready(function () {
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash)
+        if($(dev_tab).hasClass('hidden')){
+          $(dev_btn).removeClass('active');
+        }else{
+          $(pic_btn).removeClass('active');
+        }
       }
     }
   });
@@ -248,6 +289,12 @@ $(document).ready(function () {
   });
 
 
-
 })
 
+/* Function to animate height: auto */
+function autoHeightAnimate(element, time){
+  var curHeight = element.height(), // Get Default Height
+      autoHeight = element.css('height', 'auto').height(); // Get Auto Height
+      element.height(curHeight); // Reset to Default Height
+      element.stop().animate({ height: autoHeight, opacity:'1' }, time); // Animate to Auto Height
+}
