@@ -1,0 +1,14 @@
+{
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.watchOnLaunch": true,
+  "liveSassCompile.settings.formats": [
+
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/assets/sass",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveServer.settings.port": 5501
+}

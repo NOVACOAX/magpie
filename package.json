@@ -1,0 +1,26 @@
+{
+  "name": "magpie-v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "assets/js/index.js",
+  "scripts": {
+    "build-css": "tailwindcss -i ./assets/sass/styles.css -o ./assets/css/styles.css",
+    "watch-css": "tailwindcss -i ./assets/sass/styles.css -o ./assets/css/styles.css --watch",
+    "live-server": "live-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NOVACOAX/magpie.git"
+  },
+  "author": "Hugh Herschell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NOVACOAX/magpie/issues"
+  },
+  "homepage": "https://github.com/NOVACOAX/magpie#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.1",
+    "sass": "^1.55.0"
+  }
+}
+
