@@ -43,7 +43,10 @@ module.exports = {
       },
       fontFamily: {
         Poppins: ["Poppins"],
-        Inter: ["Inter"]
+        Inter: ["Inter"],
+        Lato: ["Lato"],
+        Belanosima: ["Belanosima"],
+        Yeseva: ["Yeseva One"],
       }
     },
   },
