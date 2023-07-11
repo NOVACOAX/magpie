@@ -10,11 +10,16 @@ $(document).ready(async function () {
 
   await loadFull(tsParticles);
   $("body")
-  .particles()
-  .ajax("assets/js/particlesjs-config.json", function (container) {
+    .particles()
+    .ajax("assets/js/particlesjs-config.json", function (container) {
       // container is the particles container where you can play/pause or stop/start.
       // the container is already started, you don't need to start it manually.
-  });
+    });
+
+    lightbox.option({
+      'disableScrolling': true,
+      'wrapAround': true,
+    });
 
   /**
  * Hero type effect
@@ -56,7 +61,28 @@ $(document).ready(async function () {
     });
   });
 
-  $('.socialMedia ul li a').each(function() {
+  $('#image-track').scroll(function () {
+    var containerWidth = $(this).width();
+    var scrollLeft = $(this).scrollLeft();
+    var images = $(this).find('.image');
+
+    images.each(function () {
+      // var imageWidth = $(this).width();
+      var imagePosition = $(this).offset().left - $(this).parent().offset().left;
+      var objectPosition = (imagePosition - scrollLeft + containerWidth / 2) / containerWidth * 100;
+
+      $(this).css('object-position', objectPosition + '% center');
+    });
+  });
+  $('#image-track img').each(function () {
+    VanillaTilt.init(this, {
+      max: 5,
+      reverse: true,
+      glare: true,
+    });
+  });
+
+  $('.socialMedia ul li a').each(function () {
     VanillaTilt.init(this, {
       max: 25,
       speed: 400,
@@ -66,20 +92,22 @@ $(document).ready(async function () {
   });
   let list = $('.socialMedia ul li');
   let body = $('.body-color');
-  list.each(function() {
-    $(this).on('mouseenter', function(event) {
-      let color = $(event.target).data('color');
-      body.css('background-color', color);
-    });
-    $(this).on('mouseleave', function() {
-      body.css('background-color', '#111827');
-    });
-  });
-  
-  gsap.registerPlugin(ScrollTrigger);
+  list.each(function () {
 
-  const fadeOutStart = 0.95; // Start fade out at 90% progress
-  const fadeOutEnd = 1; // Complete fade out at 95% progress
+    $(this).hover(
+      function (event) {
+        let color = $(event.target).data('color');
+        body.css('background-color', color);
+      },
+      function () {
+        body.css('background-color', '#111827');
+      }
+    );
+
+  });
+
+  const fadeOutStart = 0.95;
+  const fadeOutEnd = 1;
   const camera = gsap.timeline({
     scrollTrigger: {
       trigger: '.camera-div',
@@ -88,73 +116,78 @@ $(document).ready(async function () {
       scrub: true,
       // markers: true,
       onUpdate: (self) => {
-        if (self.direction === -1 && self.progress === 0) {
-          document.body.style.backgroundColor = 'black';
-        }
-        
         if (self.progress >= fadeOutStart && self.progress <= fadeOutEnd) {
           const opacity = 1 - (self.progress - fadeOutStart) / (fadeOutEnd - fadeOutStart);
           gsap.set('.camera', { opacity });
-          document.body.style.backgroundColor = 'black';
-        }else if(self.progress >= fadeOutEnd){
-          document.body.style.backgroundColor = 'black';
+          $('.body-color').css('background-color', 'black');
+        } else if (self.progress >= fadeOutEnd) {
+          $('.body-color').css('background-color', 'black');
           gsap.set('.camera', { visibility: 'hidden' });
         } else {
           gsap.set('.camera', { visibility: 'visible' });
-          document.body.style.backgroundColor = '#111827';
+          $('.body-color').css('background-color', '#111827');
           gsap.set('.camera', { opacity: 1 });
         }
       },
     },
   });
-  
   camera
     .to('.camera', { scale: 12, transformOrigin: "start" });
-
-
+    
+    $('.gala').each(function(index, element) {
+      const gala = gsap.timeline({
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom",
+          end: "+=" + (window.innerHeight * 0.3),
+          scrub: true,
+          // markers: true,
+        }
+      });
+      const gala_color = gsap.timeline({
+        scrollTrigger: {
+          trigger: element,
+          start: "top bottom",
+          end: "+=" + window.innerHeight,
+          scrub: true,
+          // markers: true,
+          onUpdate: (self) => {
+            const backgroundColor = $(element).data('color');
+              $('.body-color').css('background-color', backgroundColor);
+            
+          }
+        }
+      });
+    
+      gala.fromTo($(element).find('.images-div img'), {
+        opacity: 0.3,
+        x: 50
+      }, {
+        opacity: 1,
+        x: 0
+      });
+    });
+    
+    const certs = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.certs',
+        start: "top bottom",
+        end: "+=" + window.innerHeight,
+        scrub: true,
+        // markers: true,
+        onUpdate: (self) => {
+            $('.body-color').css('background-color', '#111827');
+        }
+      }
+    });
+    $('.certs div a').each(function () {
+      VanillaTilt.init(this, {
+        max: 20,
+        reverse: true,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+      });
+    });
 
 })
-
-
-const track = document.getElementById("image-track");
-
-const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
-
-const handleOnUp = () => {
-  track.dataset.mouseDownAt = "0";
-  track.dataset.prevPercentage = track.dataset.percentage;
-}
-
-const handleOnMove = e => {
-  if (track.dataset.mouseDownAt === "0") return;
-
-  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
-    maxDelta = window.innerWidth / 2;
-
-  const percentage = (mouseDelta / maxDelta) * -100,
-    nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
-    nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-
-  track.dataset.percentage = nextPercentage;
-
-  track.animate({
-    transform: `translate(${nextPercentage}%, 0%)`
-  }, { duration: 1200, fill: "forwards" });
-
-  for (const image of track.getElementsByClassName("image")) {
-    image.animate({
-      objectPosition: `${100 + nextPercentage}% center`
-    }, { duration: 1200, fill: "forwards" });
-  }
-}
-window.onmousedown = e => handleOnDown(e);
-
-window.ontouchstart = e => handleOnDown(e.touches[0]);
-
-window.onmouseup = e => handleOnUp(e);
-
-window.ontouchend = e => handleOnUp(e.touches[0]);
-
-window.onmousemove = e => handleOnMove(e);
-
-window.ontouchmove = e => handleOnMove(e.touches[0]);

@@ -23,6 +23,8 @@
     "tailwindcss": "^3.3.1"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "lightbox2": "^2.11.4",
     "rellax": "^1.12.1"
   }
 }
