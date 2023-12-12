@@ -8,13 +8,13 @@ $(document).ready(async function () {
   }
   requestAnimationFrame(raf);
 
-  await loadFull(tsParticles);
-  $("body")
-    .particles()
-    .ajax("assets/js/particlesjs-config.json", function (container) {
-      // container is the particles container where you can play/pause or stop/start.
-      // the container is already started, you don't need to start it manually.
-    });
+  // await loadFull(tsParticles);
+  // $("body")
+  //   .particles()
+  //   .ajax("assets/js/particlesjs-config.json", function (container) {
+  //     // container is the particles container where you can play/pause or stop/start.
+  //     // the container is already started, you don't need to start it manually.
+  //   });
 
     lightbox.option({
       'disableScrolling': true,
